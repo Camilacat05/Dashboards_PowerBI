@@ -1,0 +1,28 @@
+Alura Pet 
+caso 1
+Estudo de caso:
+*Faturamento total e por mês
+*Filtrar por marca e raças
+*visualizar produtos disponíveis e faturamento total dos produtos ou por produto
+*qual o genero compra mais na loja e quais produtos eles compram
+*médias de pets por cliente
+
+base dados: clientes, produtos  e vendas 
+Link da base no Google Sheet:  https://docs.google.com/spreadsheets/d/e/2PACX-1vSi6zD0nOJDf4YVOBQVXuSpAwihl4i5H4vrv7PjM3y0l0M-oHOaWYRrVXrZ1o3TOUFNnzo3sSi9b0Pu/pubhtml
+
+Power Bi
+tem 3 arquivos de venda e transformar em 1 
+coloca os 3 em 1 pasta, carrega no Powerbi e selecionar transformar e combinar dados e aí ela vira uma tabela só, dentro do powerbi
+
+Selecionar REMOVER VAZIO, deleta todos os valores NULL e VAZIOS da tabela
+
+Fórmulas DAX utilizadas:
+
+Valor Produto =  LOOKUPVALUE(Produtos[Valor], Produtos[ID Produto],[ID Produto])  (pega o valor do produto pelo o id do produto na tabela produto
+e traz pra tabela venda pelo o id de produto)
+
+Faturamento = ([Quantidade] * [Valor Produto])
+
+Faturamento_total = sum(vendas[Faturamento]) 
+
+**para variáveis de tempo é melhor grafico de linhas, como série temporal 
