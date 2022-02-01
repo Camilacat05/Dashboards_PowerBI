@@ -1,0 +1,49 @@
+Case 2: Clube do Livro
+
+O arquivo contém os Dashboards e itens de análise separados por página.
+
+Insights e Fórmulas
+
+**quantas pessoas (clientes) estão com assinaturas inativas em números absolutos e porcentagem (cartão):
+
+-Fórmula DAX para filtrar esse resultado :
+Total de assinaturas inativas = CALCULATE(COUNT(Clientes[Assinatura ativa]),Clientes[Assinatura ativa]="não")
+para transformar em porcentagem:
+% de assinaturas inativas = [Total de assinaturas inativas]/COUNT(Clientes[Assinatura ativa]) 
+
+
+**Qual a profissão que mais compra no E-commerce de livros para suas carreiras (informação em escrito) ex de uso: (Cartão de Linha Múltipla)
+Você pode sempre selecionar a mesma classe ex: (profissão e profissão), e selecionar filtros e classificar
+
+
+** número de pessoas desempregadas na plataforma 
+Fórmula DAX para filtrar esse resultado :
+total desempregados = CALCULATE(COUNT(Clientes[Profissão]),Clientes[Profissão]="desempregado(a)")
+
+**Metas de vendas Semanais ( gráfico de colunas clusterizado)
+trabalha com 2 tabelas (vendas e metas de vendas) colocar a comparação em quanto ela vendeu e quanto ela teria que vender
+sempre bom utilizar ( indicador )para categorias como tabelas metas
+
+Ánalises que possui o tempo como variável, sempre bom utilizar gráficos de Linhas OU GRÁFICO DE ÁREA construí séries Temporais 
+
+Adicionando uma nova meta no indicador:
+Nova meta = 24000
+Um novo valor máximo que preencha mais o indicador:
+Novo valor máximo = sum('Vendas por semana'[Vendas])*1.5 (50% a mais)
+
+**Tabela que mostre os desempregados por estado, cor mais forte no estado que tem mais desempregado e cor mais fraca no estado que tem menos desempregado
+ (Utilizar Mapa de calor), tem que ir em Obter mais visuais para importar o HeatMap.
+- Para análise de grupos, interessante utilizar múltiplos pequenos para uma melhor visualização, gera gráficos de linhas pra cada grupo
+
+** comparar a quantidade de Livros por assunto
+gráfico de barras indicado para comparar categorias, (quem tem mais e quem tem menos) utilizar com variáveis categóricas
+
+**Visualizar as entregas por cidade  por mapa, mostrar no mapa
+
+
+
+
+ 
+
+
+
